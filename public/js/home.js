@@ -6,7 +6,7 @@
           $sendMessage = $('.main-wrapper--compose--user-message-send');
 
     // socket
-    const socket = io.connect('http://192.168.0.234:3000');
+    const socket = io.connect('https://thelivechat.herokuapp.com/');
 
     // emit
     $sendMessage.on('click', () => {
