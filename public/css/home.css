@@ -1,0 +1,116 @@
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+body {
+  margin: 0;
+  padding: 0; }
+
+#main, .main-wrapper, .main-wrapper .messages, .main-wrapper--compose {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
+#main {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 40px 0; }
+
+.main-wrapper {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 90vw;
+  min-height: 90vh; }
+  .main-wrapper--heading {
+    -ms-flex-item-align: stretch;
+    align-self: stretch;
+    margin: 0;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 700;
+    font-style: italic;
+    font-size: 60px;
+    color: #313aed;
+    border-bottom: solid 5px #F2F2F2; }
+    @media (max-width: 450px) {
+      .main-wrapper--heading {
+        text-align: center; } }
+  .main-wrapper .messages {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    margin-bottom: 100px; }
+    .main-wrapper .messages--message {
+      padding-bottom: 5px;
+      border-bottom: solid 2px #F2F2F2;
+      overflow: hidden; }
+      .main-wrapper .messages--message--sender {
+        display: inline-block;
+        margin: 15px 15px 0 0;
+        font-family: 'Ubuntu', sans-serif;
+        font-weight: 500;
+        font-size: 30px;
+        color: #6067F1; }
+      .main-wrapper .messages--message--text {
+        font-family: 'Fira Sans', sans-serif;
+        font-size: 20px;
+        color: #777; }
+  .main-wrapper--compose {
+    margin-top: auto;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column; }
+    .main-wrapper--compose--user, .main-wrapper--compose--user-message {
+      padding: 20px;
+      border: none;
+        border-top: solid 5px #d9d9d9;
+      font-family: 'Fira Sans', sans-serif;
+      font-weight: 300;
+      font-size: 20px;
+      color: #666;
+      outline: none; }
+      .main-wrapper--compose--user::-webkit-input-placeholder, .main-wrapper--compose--user-message::-webkit-input-placeholder {
+        font-style: italic;
+        color: #8c8c8c; }
+      .main-wrapper--compose--user:-moz-placeholder, .main-wrapper--compose--user-message:-moz-placeholder {
+        font-style: italic;
+        color: #8c8c8c; }
+      .main-wrapper--compose--user::-moz-placeholder, .main-wrapper--compose--user-message::-moz-placeholder {
+        font-style: italic;
+        color: #8c8c8c; }
+      .main-wrapper--compose--user:-ms-input-placeholder, .main-wrapper--compose--user-message:-ms-input-placeholder {
+        font-style: italic;
+        color: #8c8c8c; }
+    .main-wrapper--compose--user-message {
+      height: 150px;
+      border-bottom: solid 5px #d9d9d9;
+      resize: none; }
+      .main-wrapper--compose--user-message-send {
+        height: 40px;
+        margin-top: 10px;
+        background: #6067F1;
+        font-family: 'Fira Sans', sans-serif;
+        font-size: 20px;
+        color: #F2F3F4;
+        border: none;
+          border-radius: 5px;
+        -webkit-box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.15);
+        box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.15);
+        outline: none;
+        cursor: pointer;
+        -webkit-transition: all 0.15s ease;
+        transition: all 0.15s ease; }
+        .main-wrapper--compose--user-message-send:hover {
+          background: #777df3; }
+        .main-wrapper--compose--user-message-send:active {
+          background: #4951ef;
+          -webkit-box-shadow: none;
+          box-shadow: none; }

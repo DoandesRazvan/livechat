@@ -1,0 +1,22 @@
+doctype html
+html
+  head
+    link(href="../css/home.css" rel="stylesheet")
+    link(href="https://fonts.googleapis.com/css?family=Fira+Sans|Ubuntu:500,700i" rel="stylesheet")
+    title Live Chat
+    meta(name="viewport" content="width=device-width, initial-scale = 1.0 user-scalable=no")
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.4/socket.io.slim.js")
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js")
+  body
+    main#main
+      .main-wrapper
+        h1.main-wrapper--heading Live chat
+
+        .main-wrapper--messages.messages
+
+        .main-wrapper--compose
+          input(type="text", placeholder="Username").main-wrapper--compose--user
+          textarea(placeholder="Your message").main-wrapper--compose--user-message
+          input(type="submit", value="Send message").main-wrapper--compose--user-message-send
+
+    script(src="../js/home.js")

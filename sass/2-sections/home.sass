@@ -1,0 +1,123 @@
+@import '../0-utilities/_base'
+@import '../0-utilities/_variables'
+@import '../0-utilities/_mixins'
+
+#main
+  @extend %flex
+  
+  align-items: center
+  justify-content: center
+  min-height: 100vh
+  padding: 40px 0
+
+.main-wrapper
+  @extend %flex
+
+  flex-direction: column
+  width: 90vw
+  min-height: 90vh
+
+  &--heading
+    align-self: stretch
+    margin: 0
+
+    font:
+      family: 'Ubuntu', sans-serif
+      weight: 700
+      style: italic
+      size: 60px
+    color: darken($purple, 10%)
+
+    border-bottom: solid 5px $darkened-white
+
+    @media (max-width: 450px)
+      text-align: center
+
+  .messages
+    @extend %flex
+
+    flex-direction: column
+    margin-bottom: 100px
+
+    &--message
+      padding-bottom: 5px
+
+      border-bottom: solid 2px $darkened-white
+
+      overflow: hidden
+
+      &--sender
+        display: inline-block
+        margin: 15px 15px 0 0
+
+        font:
+          family: 'Ubuntu', sans-serif
+          weight: 500
+          size: 30px
+        color: $purple
+
+      &--text
+        font:
+          family: 'Fira Sans', sans-serif
+          size: 20px
+        color: $gray
+  
+  &--compose
+    @extend %flex
+
+    margin-top: auto
+    flex-direction: column
+
+    &--user, &--user-message
+      @include placeholder()
+        font-style: italic
+        color: lighten($darker-gray, 15%)
+
+      padding: 20px
+
+      border: none
+        top: solid 5px darken($darkened-white, 10%)
+
+      font:
+        family: 'Fira Sans', sans-serif
+        weight: 300
+        size: 20px
+      color: $darker-gray
+
+      outline: none
+
+    &--user
+      &-message
+        height: 150px
+
+        border-bottom: solid 5px darken($darkened-white, 10%)
+
+        resize: none
+
+        &-send
+          height: 40px
+          margin-top: 10px
+          background: $purple
+
+          font:
+            family: 'Fira Sans', sans-serif
+            size: 20px
+          color: $faded-white
+
+          border: none
+            radius: 5px
+
+          box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.15)
+          
+          outline: none
+          cursor: pointer
+
+          transition: all 0.15s ease
+
+          &:hover
+            background: lighten($purple, 5%)
+
+          &:active
+            background: darken($purple, 5%)
+
+            box-shadow: none
